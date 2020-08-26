@@ -1,9 +1,9 @@
 def my_each(array)
   if block_given?
-  counter = 0
+  i = 0
   while counter < array.length
     yield(array[i])
-    counter += 1
+    i += 1
   end
   array
 else
@@ -12,7 +12,6 @@ else
 end
 end
 
-collection = [1, 2, 3, 4]
-my_each(collection) do |i|
+my_each(array) do |i|
   puts i
 end
